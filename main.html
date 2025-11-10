@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novembre Bleu, Octobre Rose - Informations</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-text">BleuRose</span>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="#informations" class="nav-link">Informations</a>
+                <a href="#galerie" class="nav-link">Galerie</a>
+                <a href="#quiz" class="nav-link">Quiz</a>
+            </nav>
+            <button class="btn-contact">NOUS CONTACTER</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Découvrez L'Importance Du Dépistage</h1>
+                <p class="hero-description">
+                    Le dépistage précoce des cancers du sein et de la prostate peut sauver des vies. 
+                    Informez-vous sur les signes à surveiller et les mesures préventives à prendre.
+                </p>
+                <button class="btn-hero" onclick="scrollToSection('informations')">
+                    COMMENCER
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <!-- <div class="card-icon"><i class="fas fa-plus"></i></div> -->
+                    <h3>Sensibilisation</h3>
+                    <p>Ensemble, créons un avenir sans cancer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join The Change Section -->
+    <section class="join-section">
+        <div class="container">
+            <div class="join-content">
+                <div class="join-text">
+                    <h2 class="section-label">REJOIGNEZ LE CHANGEMENT</h2>
+                    <h3 class="section-title">Ensemble, Créons Un Meilleur Avenir</h3>
+                    <p class="section-description">
+                        Rejoignez-nous dans la lutte contre les cancers du sein et de la prostate. 
+                        La sensibilisation et le dépistage précoce sont essentiels pour sauver des vies.
+                    </p>
+                    <button class="btn-primary" onclick="scrollToSection('quiz')">
+                        TESTER VOS CONNAISSANCES
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-stethoscope"></i></div>
+                        <h4>DÉPISTAGE</h4>
+                        <p>Le dépistage précoce permet une détection à un stade où le traitement est plus efficace. 
+                        Un simple examen peut sauver des vies.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h4>INFORMATIONS</h4>
+                        <p>Informez-vous sur les signes à surveiller, les facteurs de risque et les mesures préventives 
+                        pour protéger votre santé.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-hands-helping"></i></div>
+                        <h4>SOUTIEN</h4>
+                        <p>Nous sommes là pour vous accompagner et vous informer sur les ressources disponibles 
+                        pour votre bien-être.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informations Section -->
+    <section class="informations-section" id="informations">
+        <div class="container">
+            <h2 class="section-main-title">Informations Sur Les Cancers</h2>
+            <div class="cancer-info-grid">
+                <div class="cancer-card">
+                    <div class="cancer-image">
+                        <img src="assets/image/tutoman03.png" alt="Cancer de la prostate">
+                    </div>
+                    <h3>NOVEMBRE BLEU</h3>
+                    <h4>Cancer de la Prostate</h4>
+                    <p>Le cancer de la prostate est le cancer le plus fréquent chez l'homme. 
+                    Le dépistage dès 45 ans aide à le détecter tôt et augmente les chances de guérison.</p>
+                    <ul class="cancer-signs">
+                        <li><i class="fas fa-check"></i> Difficultés à uriner</li>
+                        <li><i class="fas fa-check"></i> Douleurs au bas-ventre</li>
+                        <li><i class="fas fa-check"></i> Envies fréquentes d'uriner la nuit</li>
+                    </ul>
+                </div>
+                <div class="cancer-card">
+                    <div class="cancer-image">
+                        <img src="assets/image/tutowomen03.png" alt="Cancer du sein">
+                    </div>
+                    <h3>OCTOBRE ROSE</h3>
+                    <h4>Cancer du Sein</h4>
+                    <p>Le cancer du sein est le cancer le plus fréquent chez la femme. 
+                    Le dépistage précoce peut sauver des vies grâce à une détection à un stade précoce.</p>
+                    <ul class="cancer-signs">
+                        <li><i class="fas fa-check"></i> Boule dans le sein</li>
+                        <li><i class="fas fa-check"></i> Rougeur ou douleur inhabituelle</li>
+                        <li><i class="fas fa-check"></i> Écoulement du mamelon</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-main-title">Services et Ressources</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="assets/image/tutoman04.png" alt="Examen médical">
+                    </div>
+                    <h3>EXAMEN MÉDICAL</h3>
+                    <p>Consultation avec un médecin ou un spécialiste pour un examen clinique complet.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="assets/image/tutowomen04.png" alt="Auto-examen">
+                    </div>
+                    <h3>AUTO-EXAMEN</h3>
+                    <p>Apprenez à effectuer un auto-examen régulier pour détecter les signes précoces.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="assets/image/tutoman045png.png" alt="Consultation">
+                    </div>
+                    <h3>CONSULTATION</h3>
+                    <p>Prenez rendez-vous avec un professionnel de santé pour discuter de vos préoccupations.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="assets/image/tutowomen05.png" alt="Dépistage">
+                    </div>
+                    <h3>DÉPISTAGE</h3>
+                    <p>Programmes de dépistage organisés pour une détection précoce efficace.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="assets/image/tutoman03.png" alt="Suivi">
+                    </div>
+                    <h3>SUIVI RÉGULIER</h3>
+                    <p>Un suivi régulier avec votre médecin pour maintenir une bonne santé.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="assets/image/tutowomen03.png" alt="Information">
+                    </div>
+                    <h3>INFORMATION</h3>
+                    <p>Accès à des ressources et informations fiables sur la prévention et le traitement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <h2 class="section-label">BÉNÉFICES DU DÉPISTAGE</h2>
+                    <h3 class="section-main-title">Dépistage Précoce</h3>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="benefit-content">
+                            <h4>Détection Précoce</h4>
+                            <p>Le dépistage permet de détecter les cancers à un stade précoce, 
+                            augmentant considérablement les chances de guérison et réduisant la complexité des traitements.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-heart"></i></div>
+                        <div class="benefit-content">
+                            <h4>Soutien et Accompagnement</h4>
+                            <p>Un réseau de professionnels de santé est disponible pour vous accompagner 
+                            tout au long du processus de dépistage et de traitement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits-image">
+                    <img src="assets/image/tutoman03.png" alt="Dépistage précoce">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-label">À PROPOS DE LA JOURNÉE</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Journée de Sensibilisation</h3>
+                    <p>
+                        Cette journée de sensibilisation est organisée pour informer le public sur l'importance 
+                        du dépistage des cancers du sein et de la prostate. Nous croyons que l'information et 
+                        la prévention sont les meilleurs outils pour lutter contre ces maladies.
+                    </p>
+                    <p>
+                        Notre mission est de sensibiliser le public, de promouvoir le dépistage précoce et 
+                        de fournir des ressources fiables pour aider chacun à prendre soin de sa santé.
+                    </p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">>144k</div>
+                        <div class="stat-label">DÉPISTAGES RÉALISÉS</div>
+                        <p>Grâce à nos efforts de sensibilisation, des milliers de personnes ont pu bénéficier d'un dépistage précoce.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">+90%</div>
+                        <div class="stat-label">Taux de Guérison</div>
+                        <p>Le dépistage précoce permet d'atteindre un taux de guérison supérieur à 90% pour les cancers détectés tôt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="galerie">
+        <div class="container">
+            <h2 class="section-main-title">Galerie de la Journée</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/image/tutoman01.png" alt="Sensibilisation homme">
+                    <div class="gallery-overlay">
+                        <p>Sensibilisation Novembre Bleu</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/tutowomen01.png" alt="Sensibilisation femme">
+                    <div class="gallery-overlay">
+                        <p>Sensibilisation Octobre Rose</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/tutoman03.png" alt="Information">
+                    <div class="gallery-overlay">
+                        <p>Stand d'information</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/tutowomen03.png" alt="Événement">
+                    <div class="gallery-overlay">
+                        <p>Journée de sensibilisation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section" id="quiz">
+        <div class="container">
+            <h2 class="section-main-title">Testez Vos Connaissances</h2>
+            <div class="quiz-container">
+                <div class="quiz-question" id="quiz-question">
+                    <h3 id="question-text">Chargement des questions...</h3>
+                    <div class="quiz-options" id="quiz-options">
+                        <!-- Options will be inserted here -->
+                    </div>
+                    <div class="quiz-feedback" id="quiz-feedback"></div>
+                </div>
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <p>Question <span id="question-number">1</span> sur <span id="total-questions">5</span></p>
+                </div>
+                <button class="btn-quiz" id="next-question" onclick="nextQuestion()">
+                    Question Suivante
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <div class="quiz-result" id="quiz-result">
+                    <h3>Résultats du Quiz</h3>
+                    <div class="result-score" id="result-score"></div>
+                    <p class="result-message" id="result-message"></p>
+                    <button class="btn-quiz" onclick="restartQuiz()">
+                        Recommencer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-cta">
+                <h2>Contactez-nous dès maintenant pour en savoir plus !</h2>
+                <button class="btn-footer" onclick="scrollToSection('hero')">
+                    COMMENCER
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>INFORMATIONS</h4>
+                    <a href="#informations">Dépistage</a>
+                    <a href="#about">À propos</a>
+                    <a href="#galerie">Galerie</a>
+                </div>
+                <div class="footer-column">
+                    <h4>RESSOURCES</h4>
+                    <a href="#quiz">Quiz</a>
+                    <a href="#informations">Informations</a>
+                    <a href="#about">Journée</a>
+                </div>
+                <div class="footer-column">
+                    <h4>SUPPORT</h4>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Aide</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>©2024 Tous droits réservés</p>
+                <div class="footer-legal">
+                    <a href="#">Conditions générales</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Téléphone"><i class="fas fa-phone"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Messages"><i class="fas fa-comments"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

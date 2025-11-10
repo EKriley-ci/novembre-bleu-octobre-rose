@@ -1,0 +1,443 @@
+@charset "UTF-8";
+/* 🔁 Reset SCSS moderne */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: #111;
+  background-color: #fff;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.tuto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.tuto .top-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+}
+.tuto .top-box H1 {
+  font-size: 3.2rem;
+}
+.tuto .top-box p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.tuto .cartes {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.tuto .cartes .carte-homme, .tuto .cartes .carte-femme {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1), z-index 0.2s, opacity 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.tuto .cartes .carte-homme .carte-femme-img, .tuto .cartes .carte-homme .carte-homme-img, .tuto .cartes .carte-femme .carte-femme-img, .tuto .cartes .carte-femme .carte-homme-img {
+  border: 7px solid;
+  border-radius: 20px;
+  transition: border-color 0.2s, box-shadow 0.3s;
+}
+.tuto .cartes .carte-homme {
+  transform: rotate(-10deg);
+}
+.tuto .cartes .carte-homme .carte-homme-img {
+  border-color: #2094FF;
+}
+.tuto .cartes .carte-homme h2 {
+  color: #2094FF;
+}
+.tuto .cartes .carte-femme {
+  transform: rotate(10deg);
+}
+.tuto .cartes .carte-femme .carte-femme-img {
+  border-color: #FF5375;
+}
+.tuto .cartes .carte-femme h2 {
+  color: #FF5375;
+}
+.tuto .cartes .carte-homme:hover, .tuto .cartes .carte-femme:hover {
+  transform: scale(1.4) rotate(0deg);
+  z-index: 10;
+  opacity: 1;
+  cursor: pointer;
+}
+.tuto .cartes .carte-homme:hover ~ .carte-femme {
+  opacity: 0.4;
+  z-index: 1;
+  transform: scale(0.95) rotate(10deg);
+}
+.tuto .cartes .carte-femme:hover ~ .carte-homme {
+  opacity: 0.5;
+  z-index: 1;
+  transform: scale(0.95) rotate(-10deg);
+}
+.tuto .cartes .carte-femme:not(:hover):not(:focus-within) {
+  opacity: 1;
+  z-index: 1;
+}
+.tuto .cartes .carte-homme:not(:hover):not(:focus-within) {
+  opacity: 1;
+  z-index: 1;
+}
+.tuto .bottom-box {
+  text-align: center;
+  max-width: 80%;
+}
+.tuto.hidden {
+  display: none;
+}
+.tuto .confirmation-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  animation: fadeIn 0.5s ease-in;
+}
+.tuto .confirmation-screen .confirmation-cards {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  margin: 2rem 0;
+}
+.tuto .confirmation-screen .confirmation-cards .confirmation-card {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.tuto .confirmation-screen .confirmation-cards .confirmation-card.active {
+  transform: scale(1.15) translateZ(0);
+  z-index: 10;
+  opacity: 1;
+}
+.tuto .confirmation-screen .confirmation-cards .confirmation-card.inactive {
+  opacity: 0.4;
+  transform: scale(0.85);
+  z-index: 1;
+}
+.tuto .confirmation-screen .confirmation-cards .confirmation-card .confirmation-card-img {
+  border: 7px solid;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.tuto .confirmation-screen .confirmation-cards .confirmation-card .confirmation-card-img.blue-border {
+  border-color: #2094FF;
+}
+.tuto .confirmation-screen .confirmation-cards .confirmation-card .confirmation-card-img.pink-border {
+  border-color: #FF5375;
+}
+.tuto .confirmation-screen .confirmation-cards .confirmation-card .confirmation-card-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.tuto .confirmation-screen .confirmation-cards .confirmation-card h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.tuto .confirmation-screen .confirmation-cards .confirmation-card h2.blue-text {
+  color: #2094FF;
+}
+.tuto .confirmation-screen .confirmation-cards .confirmation-card h2.pink-text {
+  color: #FF5375;
+}
+.tuto .confirmation-screen .confirmation-cards .confirmation-card h2.faded-text {
+  opacity: 0.5;
+  color: #999;
+}
+.tuto .confirmation-screen .confirmation-message {
+  text-align: center;
+  margin: 2rem 0;
+}
+.tuto .confirmation-screen .confirmation-message .confirmation-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+.tuto .confirmation-screen .confirmation-message .confirmation-gender {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0 0;
+  line-height: 1.2;
+}
+.tuto .confirmation-screen .confirmation-message .confirmation-gender.homme-text {
+  color: #2094FF;
+}
+.tuto .confirmation-screen .confirmation-message .confirmation-gender.femme-text {
+  color: #FF5375;
+}
+.tuto .confirmation-screen .btn-commencer {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 2rem;
+}
+.tuto .confirmation-screen .btn-commencer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.tuto .confirmation-screen .btn-commencer:active {
+  transform: scale(0.98);
+}
+.tuto .confirmation-screen .btn-commencer.homme-btn {
+  background-color: #2094FF;
+  color: white;
+}
+.tuto .confirmation-screen .btn-commencer.femme-btn {
+  background-color: #FF5375;
+  color: white;
+}
+.tuto .confirmation-screen .btn-commencer .arrow {
+  font-size: 1.5rem;
+}
+.tuto .tutorial-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  animation: fadeIn 0.5s ease-in;
+}
+.tuto .tutorial-slide .slide-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  color: #111;
+  width: 100%;
+  max-width: 800px;
+}
+.tuto .tutorial-slide .slide-illustration {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #f5f0e8;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.tuto .tutorial-slide .slide-illustration img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+}
+.tuto .tutorial-slide .slide-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: left;
+  color: #333;
+}
+.tuto .tutorial-slide .slide-content p {
+  margin-bottom: 0.5rem;
+}
+.tuto .tutorial-slide .slide-content strong {
+  font-weight: bold;
+  color: #111;
+}
+.tuto .tutorial-slide .slide-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.tuto .tutorial-slide .slide-navigation .btn-nav {
+  padding: 1rem 2.5rem;
+  border: 2px solid;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+  max-width: 200px;
+}
+.tuto .tutorial-slide .slide-navigation .btn-nav:hover:not(.disabled) {
+  transform: scale(1.05);
+}
+.tuto .tutorial-slide .slide-navigation .btn-nav:active:not(.disabled) {
+  transform: scale(0.98);
+}
+.tuto .tutorial-slide .slide-navigation .btn-nav.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.tuto .tutorial-slide .slide-navigation .btn-nav.btn-retour {
+  background-color: white;
+  border: 2px solid;
+}
+.tuto .tutorial-slide .slide-navigation .btn-nav.btn-retour.homme-theme-btn {
+  color: #2094FF;
+  border-color: #2094FF;
+}
+.tuto .tutorial-slide .slide-navigation .btn-nav.btn-retour.femme-theme-btn {
+  color: #FF5375;
+  border-color: #FF5375;
+}
+.tuto .tutorial-slide .slide-navigation .btn-nav.btn-retour.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.tuto .tutorial-slide .slide-navigation .btn-nav.btn-suivant {
+  color: white;
+  border: none;
+}
+.tuto .tutorial-slide .slide-navigation .btn-nav.btn-suivant.homme-btn {
+  background-color: #2094FF;
+}
+.tuto .tutorial-slide .slide-navigation .btn-nav.btn-suivant.femme-btn {
+  background-color: #FF5375;
+}
+.tuto .tutorial-end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+.tuto .tutorial-end .end-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #111;
+}
+.tuto .tutorial-end .end-message {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+  max-width: 600px;
+}
+.tuto .tutorial-end .btn-commencer {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tuto .tutorial-end .btn-commencer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.tuto .tutorial-end .btn-commencer.homme-btn {
+  background-color: #2094FF;
+  color: white;
+}
+.tuto .tutorial-end .btn-commencer.femme-btn {
+  background-color: #FF5375;
+  color: white;
+}
+.tuto .tutorial-end .btn-commencer.btn-secondary {
+  background: transparent;
+  border: 2px solid;
+}
+.tuto .tutorial-end .btn-commencer.btn-secondary.homme-btn {
+  border-color: #2094FF;
+  color: #2094FF;
+}
+.tuto .tutorial-end .btn-commencer.btn-secondary.femme-btn {
+  border-color: #FF5375;
+  color: #FF5375;
+}
+.tuto .tutorial-end .btn-commencer .arrow,
+.tuto .tutorial-end .btn-commencer .fa-arrow-right {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body.homme-theme {
+  background-color: #f0f8ff;
+}
+
+body.femme-theme {
+  background-color: #fff0f5;
+}/*# sourceMappingURL=style.css.map */
