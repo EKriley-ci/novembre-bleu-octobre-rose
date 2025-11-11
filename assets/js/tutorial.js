@@ -248,3 +248,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Pour gérer le loader
+window.onload = function () {
+    const loaderWrapper = document.getElementById("loader-wrapper");
+    const content = document.querySelector(".tuto");
+
+    setTimeout(() => {
+        loaderWrapper.style.display = 'none'
+        content.classList.add("show");
+    },2000)
+}
